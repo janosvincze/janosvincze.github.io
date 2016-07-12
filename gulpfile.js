@@ -91,8 +91,9 @@ gulp.task('release', function(){
 gulp.task('deploy', function() {
   return gulp.src('./**/*')
     .pipe(ghPages([
-      {remoteUrl: "git+https://github.com/janosvincze/portfolio.git",
-      branch: 'index'}
+      {remoteUrl: "https://github.com/janosvincze/janosvincze.github.io",
+       origin: "gh_pages",
+      branch: "gh_pages"}
   ]));
 });
 
