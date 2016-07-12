@@ -6,7 +6,8 @@ var gulp       = require('gulp'),
     git        = require('gulp-git'),
     push       = require('gulp-git-push'),
     responsive = require('gulp-responsive-images'),
-    cleanDest  = require('gulp-clean-dest');
+    cleanDest  = require('gulp-clean-dest'),
+    runSeq     = require('run-sequence');
 
 gulp.task('styles', function(){
     
@@ -77,7 +78,10 @@ gulp.task('push', function(){
   });
 });
 
-gulp.task('upload', ['commit', 'push']);
+
+gulp.task('upload', function (cb) {
+  runSeq(['commit', 'push'], cb);
+});
 
 gulp.task('watch', function() {
     gulp.watch('jd/*.js', ['scripts']);
