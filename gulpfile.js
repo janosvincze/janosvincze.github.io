@@ -67,8 +67,9 @@ gulp.task('bump', function() {
 gulp.task('commit', function(){
   return gulp.src(['./index.html','./images/*','./css/*','./font/*','./gulpfile.js'])
     .pipe(git.commit('index test commit', {
-      args: '-m "initial commit"',
-      disableMessageRequirement: true
+      //args: '-m "initial commit"',
+      disableMessageRequirement: true,
+      quiet: true
     }));
 });
 
