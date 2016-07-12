@@ -6,9 +6,7 @@ var gulp       = require('gulp'),
     git        = require('gulp-git'),
     push       = require('gulp-git-push'),
     responsive = require('gulp-responsive-images'),
-    cleanDest  = require('gulp-clean-dest'),
-    release    = require('gulp-github-release'),
-    ghPages    = require('gulp-gh-pages');
+    cleanDest  = require('gulp-clean-dest');
 
 gulp.task('styles', function(){
     
@@ -64,29 +62,6 @@ gulp.task('bump', function() {
         }));
 });
 
-gulp.task('release', function(){
-  gulp.src('./**/*')
-    .pipe(release({
-      token: '46b5c63aec38b8eb03c4a7b6b1f47da62b0a3f64',                     // or you can set an env var called GITHUB_TOKEN instead 
-      //owner: 'remixz',                    // if missing, it will be extracted from manifest (the repository.url field) 
-      //repo: 'publish-release',            // if missing, it will be extracted from manifest (the repository.url field) 
-      //tag: 'v1.0.0',                      // if missing, the version will be extracted from manifest and prepended by a 'v' 
-      //name: 'publish-release v1.0.0',     // if missing, it will be the same as the tag 
-      notes: 'very good!',                // if missing it will be left undefined 
-      draft: false,                       // if missing it's false 
-      //prerelease: false,                  // if missing it's false 
-      manifest: require('./package.json') // package.json from which default values will be extracted if they're missing 
-    }));
-});
-
-gulp.task('deploy', function() {
-  return gulp.src('./**/*')
-    .pipe(ghPages([
-      {remoteUrl: "https://github.com/janosvincze/janosvincze.github.io",
-       origin: "gh_pages",
-      branch: "gh_pages"}
-  ]));
-});
 
 gulp.task('commit', function(){
   return gulp.src(['./index.html','./images/*','./css/*','./font/*','./gulpfile.js'])
@@ -101,6 +76,8 @@ gulp.task('push', function(){
     if (err) throw err;
   });
 });
+
+gulp.task('upload', ['commit', 'push']);
 
 gulp.task('watch', function() {
     gulp.watch('jd/*.js', ['scripts']);
