@@ -80,7 +80,7 @@ gulp.task('push', function(){
 
 
 gulp.task('upload', function (cb) {
-  runSeq(['commit', 'push'], cb);
+  runSeq('commit', 'push', cb);
 });
 
 gulp.task('watch', function() {
