@@ -10,15 +10,6 @@ var gulp       = require('gulp'),
     release    = require('gulp-github-release'),
     ghPages    = require('gulp-gh-pages');
 
-gulp.task('scripts', function(){
-    
-    gulp.src('js/**/*.js')
-        .pipe(uglify())
-        .pipe(rename('app.min.js'))
-        .pipe(gulp.dest('js/'));
-    
-});
-
 gulp.task('styles', function(){
     
     gulp.src('css/**/*.css')
@@ -95,6 +86,20 @@ gulp.task('deploy', function() {
        origin: "gh_pages",
       branch: "gh_pages"}
   ]));
+});
+
+gulp.task('commit', function(){
+  return gulp.src(['./index.html','./images/*','./css/*','./font/*','./gulpfile.js'])
+    .pipe(git.commit('index test commit', {
+      args: '-m "initial commit"',
+      disableMessageRequirement: true
+    }));
+});
+
+gulp.task('push', function(){
+  git.push('origin', 'master', function (err) {
+    if (err) throw err;
+  });
 });
 
 gulp.task('watch', function() {
