@@ -65,7 +65,7 @@ gulp.task('bump', function() {
 
 
 gulp.task('commit', function(){
-  return gulp.src(['./index.html','./images/*','./css/*','./font/*','./gulpfile.js'])
+  return gulp.src(['./index.html','./images/*','./images/*.svg','./css/*','./font/*','./gulpfile.js'])
     .pipe(git.commit('Commit with Gulp', {
       args: '--allow-empty -m "initial commit"',
       disableMessageRequirement: true,
