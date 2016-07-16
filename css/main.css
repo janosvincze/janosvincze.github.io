@@ -1,34 +1,185 @@
-/*
-
-Your styles go here!
-
-Hint! You'll probably want to start by styling:
-  * <body>
-  * <article>
-  * <h1>
-  * <img>
-
-I've left some boilerplate below for you.
-
-*/
-
 body {
-
-}
-
-article {
-    width: 50em;
-}
-section {
-    width: 100%
-    
-}
-h1 {
-
+    display: block;
+    margin: 0;
+    box-sizing: border-box;
+    align-items: center;
+    align-content: center;
+    font-family: 'Lato', sans-serif;
+    color: #2d3c49;
 }
 
 img {
     transition: width 0.5s;
-    width: 90vw;
+    width: 100%;
     max-width: 100%;
 }
+
+hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 2px solid #7d97ad;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-content: center;
+}
+
+.row {
+    width: 100%;
+    max-width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 10px;
+    min-width: 200px;
+}
+
+.svg_container {
+    float: left;
+    min-width: 100px;
+    height: 100%;
+    max-height: 100px;
+    width: 120px;
+    
+}
+
+.header__logo {
+    float: left;
+    border: 0;
+    height: 100%;
+    max-height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+.header__row {
+    min-height: 100px;
+    margin-bottom: 20px;
+}
+
+.header__left {
+    height: inherit;
+    text-align: left;
+}
+
+.header__right {
+    height: inherit;
+    text-align: right;
+    min-width: 150px;
+}
+
+.header__title {
+    font-weight: 300;
+    text-transform: uppercase;  
+}
+
+.header__subtitle {
+    font-weight: 100;
+}
+
+.featured__text {
+    color: #7d97ad;
+    font-weight: 300;
+    font-size: 28px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.row__flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-top: -10px;
+}
+
+.col__flex {
+	flex: 1 0 200px;
+    box-sizing: border-box;
+	margin-left: 5px;
+	margin-right: 0;
+    margin-top: 10px;
+    text-align: center;    
+}
+
+.work__title {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 28px;
+    margin: 5px; 
+}
+
+
+.github__link {
+    font-weight: 300;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    
+}
+
+
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    
+    float: left;
+    position: relative;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+    
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+
