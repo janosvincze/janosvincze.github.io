@@ -11,9 +11,7 @@
 
   <title>Portfolio Site</title>
 
-  
-  <link href='https://fonts.googleapis.com/css?family=Lato:300,100' rel='stylesheet'>
-
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,100" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css" />
 
 </head>
@@ -22,36 +20,36 @@
 
   <!-- Using container -->
     
-  <div class="container">
+  <div class="container" id="main-container">
   
       <!-- Header -->
       
-      <div class="row header__row">
+      <header>
       
           <!-- Left part of the header -->
           
-          <div class="col-5 header__left">
-             <div class="svg_container">
+          <div class="col-5 header__left" id="header-left-side">
+             <div class="svg_container" id="logo-container">
                 <img class="header__logo" src="images/udacity.svg" alt="Udacity U logo" />
               </div>
           </div>
           
           <!-- Right part of the header -->
           
-          <div class="col-7 header__right">
+          <div class="col-7 header__right" id="header-title">
             <h1 class="header__title">Janos Vincze</h1>
             <h3 class="header__subtitle">Front-end Ninja</h3>
               
           </div>
           
           
-      </div>
+      </header>
       
       <!-- The main picture's row -->
       
-      <div class="row">
+      <section class="row" id="main-picture">
       
-        <div class="col-12">
+        <div class="col-12" id="main-picture-row">
             <hr>
             <picture class="picture__set"> 
                 <source srcset="images/coding-630px.jpg" media="(min-width: 601px)">
@@ -61,27 +59,27 @@
             </picture>
         </div>
       
-      </div>
+      </section>
       
     <!-- The begining of the Featured Work section -->
       
-    <div class="row">
+    <section class="row" id="featured-works-title">
       
         <div class="col-12">
             <h2 class="featured__text">Featured Work</h2>
 
         </div>
       
-    </div>
+    </section>
       
    <!-- The Works section -->
       
-   <div class="row">
-   <div class="col-12 row__flex">
+   <nav class="row" id="works-navigation">
+    <div class="col-12 row__flex" id="works-row">
       
         <!-- Appify part -->
        
-        <div class="col-4 col__flex">
+        <div class="col-4 col__flex" id="work-appify">
             <a href="http://github.com/Appify">
                 <picture class="picture__set"> 
                     <source srcset="images/meeting-500px.jpg" media="(max-width: 600px), (min-width: 301px)">
@@ -96,7 +94,7 @@
        
         <!-- Sunflower part -->
        
-        <div class="col-4 col__flex">
+        <div class="col-4 col__flex" id="work-sunflower">
             <a href="http://github.com/Sunflower">
                 <picture class="picture__set"> 
                     <source srcset="images/helicopter_view-500px.jpg" media="(max-width: 600px), (min-width: 301px)">
@@ -111,7 +109,7 @@
        
         <!-- Bokeh part -->
        
-        <div class="col-4 col__flex">
+        <div class="col-4 col__flex" id="work-bokeh">
             <a href="http://github.com/Bokeh">
                 <picture class="picture__set"> 
                     <source srcset="images/caferacer-500px.jpg" media="(max-width: 600px), (min-width: 301px)">
@@ -124,14 +122,14 @@
 
         </div>
       
-    </div>
-    </div>
+     </div>
+    </nav>
       
     <!-- Link to GitHub -->
       
-    <div class="row">
+    <footer class="row">
       
-        <div class="col-12">
+        <div class="col-12" id="github-row">
             <hr>
             <p class="github__link">
                 <a class="link__text" href="https://github.com/janosvincze/janosvincze.github.io" title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
@@ -139,7 +137,7 @@
 
         </div>
       
-    </div>
+    </footer>
       
   </div>
     
