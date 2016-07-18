@@ -78,7 +78,7 @@ hr {
 .header__title {
     font-size: 2.5em;
     font-weight: 300;
-    text-transform: uppercase;  
+    text-transform: uppercase;
     margin-bottom: 0;
 }
 
@@ -90,11 +90,11 @@ hr {
 
 @media only screen 
     and (max-width: 320px) {
-  
+
     .header__right {
-        text-align: center;       
+        text-align: center;
     }
-        
+
     .header__subtitle {
         font-size: 1em;
     }
@@ -143,7 +143,6 @@ hr {
     font-size: 15px;
     margin-top: 15px;
     margin-bottom: 5px;
-    
 }
 
 /* Columns specifications */
@@ -160,7 +159,7 @@ hr {
 .col-10, 
 .col-11, 
 .col-12 {
-    
+
     float: left;
     position: relative;
 }
@@ -203,7 +202,6 @@ hr {
 
 .col-10 {
     width: 83.33%;
-    
 }
 
 .col-11 {
