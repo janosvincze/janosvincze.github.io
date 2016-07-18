@@ -9,6 +9,9 @@ var gulp       = require('gulp'),
     cleanDest  = require('gulp-clean-dest'),
     runSeq     = require('run-sequence');
 
+
+// Clean/minimize CSS files
+
 gulp.task('styles', function(){
     
     gulp.src('css/**/*.css')
@@ -16,6 +19,8 @@ gulp.task('styles', function(){
         .pipe(gulp.dest('minCSS/'));
     
 });
+
+// Resizing images from images_src directory to images
 
 gulp.task('imgResize', function () {
  return gulp.src('images_src/*.{png,jpg}')
@@ -48,24 +53,23 @@ gulp.task('imgResize', function () {
     .pipe(gulp.dest('images'));
 });
 
+// Bump package.json version, and push local changes to repository
+
 gulp.task('bump', function() {
   return gulp.src('./package.json')
-        // bump package.json version 
         .pipe(bump({type: 'patch'}))
-        // save bumped file into filesystem 
         .pipe(gulp.dest('./'))
-        // commit changes 
         .pipe(git.commit('bump version'))
-        // push local changes to repository 
         .pipe(push({                      
             repository: 'origin',
             refspec: 'HEAD'
         }));
 });
 
+// Git: Commit changes
 
 gulp.task('commit', function(){
-  return gulp.src(['./index.html','./images/*','./images/*.svg','./css/*','./font/*','./gulpfile.js'])
+  return gulp.src(['./index.html','./images/*','./images/*.svg','./css/*','./font/*','./gulpfile.js', './README.md'])
     .pipe(git.commit('Commit with Gulp', {
       args: '--allow-empty -m "initial commit"',
       disableMessageRequirement: true,
@@ -73,21 +77,26 @@ gulp.task('commit', function(){
     }));
 });
 
+// Git: Push it to master
+
 gulp.task('push', function(){
   git.push('origin', 'master', function (err) {
     if (err) throw err;
   });
 });
 
+// Git: Commit changes and push it to master
 
 gulp.task('upload', function (cb) {
   runSeq('commit', 'push', cb);
 });
 
+// Watch changes
+
 gulp.task('watch', function() {
-    gulp.watch('jd/*.js', ['scripts']);
+    //gulp.watch('jd/*.js', ['scripts']);
     gulp.watch('css/*.css', ['styles']);
     
 });
 
-gulp.task('default',['scripts','styles']);
+gulp.task('default',['styles']);
