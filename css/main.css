@@ -42,16 +42,6 @@ hr {
 
 /* Header */
 
-header {
-    width: 100%;
-    max-width: 750px;
-    min-width: 200px;
-    min-height: 100px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 20px;
-}
-
 .svg_container {
     float: left;
     min-width: 100px;
