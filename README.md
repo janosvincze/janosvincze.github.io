@@ -8,9 +8,9 @@ Using html/css to build responsive site
 
 ## Site Structure
 
-* Base structure
+### Base structure
 I used grid based structure with 12 columns:  
-'''HTML
+```
 <div class="container">
     <div class="row">
         <div class="col-5">
@@ -21,9 +21,9 @@ I used grid based structure with 12 columns:
         </div>
     </div>
 </div>
-'''
+```
 
-* Responsiveness
+### Responsiveness
 - Using media query to change the layout in <picture> and CSS.
 - Using flex attribute to wrap "Featured work" area.
 
@@ -32,14 +32,14 @@ I used grid based structure with 12 columns:
 I used [Gulp](http://http://gulpjs.com/) to automate images resizing, and to commit and push the changes to GitHub, as you can see in [gulpfile.js](gulpfile.js).
 
 Resize image with suffix from images_src directory to images: 
-'''
+```
 gulp imgResize
-'''
+```
 
 Commit and push changes to GitHub (before using it, you should link manually your repository): 
-'''
+```
 gulp upload
-'''
+```
 
 ## Sources
 
