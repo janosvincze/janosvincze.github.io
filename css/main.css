@@ -40,13 +40,14 @@ hr {
     min-width: 200px;
 }
 
+/* Header */
+
 .svg_container {
     float: left;
     min-width: 100px;
     height: 100%;
     max-height: 100px;
-    width: 120px;
-    
+    width: 120px; 
 }
 
 .header__logo {
@@ -57,8 +58,6 @@ hr {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
-
 
 .header__row {
     min-height: 100px;
@@ -76,22 +75,43 @@ hr {
     min-width: 150px;
 }
 
+
 .header__title {
+    font-size: 2.5em;
     font-weight: 300;
     text-transform: uppercase;  
+    margin-bottom: 0;
 }
 
 .header__subtitle {
+    font-size: 2em;
     font-weight: 100;
+    margin-top: 0;
 }
+
+@media only screen 
+    and (max-width: 320px) {
+  
+    .header__right {
+        text-align: center;       
+    }
+        
+    .header__subtitle {
+        font-size: 1em;
+    }
+}
+
+/* Link section */
 
 .featured__text {
     color: #7d97ad;
     font-weight: 300;
-    font-size: 28px;
+    font-size: 2em;
     margin-top: 15px;
     margin-bottom: 5px;
 }
+
+/* Navigation part */
 
 .row__flex {
     display: flex;
@@ -106,7 +126,8 @@ hr {
 	margin-left: 5px;
 	margin-right: 0;
     margin-top: 10px;
-    text-align: center;    
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 .work__title {
@@ -116,6 +137,7 @@ hr {
     margin: 5px; 
 }
 
+/*  Link to GitHub */
 
 .github__link {
     font-weight: 300;
@@ -125,9 +147,20 @@ hr {
     
 }
 
+/* Columns specifications */
 
-
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+.col-1, 
+.col-2, 
+.col-3, 
+.col-4, 
+.col-5, 
+.col-6, 
+.col-7, 
+.col-8, 
+.col-9, 
+.col-10, 
+.col-11, 
+.col-12 {
     
     float: left;
     position: relative;

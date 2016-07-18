@@ -5,14 +5,13 @@
   <meta name="description" content="Portfolio Site" />
   <meta name="author" content="Janos Vincze">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-  <meta id="theme-color" name="theme-color" content="#307699">
   <meta charset="utf-8">
     
   <base target="_blank">
 
   <title>Portfolio Site</title>
 
-  <link href='https://fonts.googleapis.com/css?family=Lato:300,100' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,100' rel='stylesheet'>
 
   <link rel="stylesheet" href="css/main.css" />
 
@@ -20,15 +19,24 @@
 
 <body>
 
+  <!-- Using container -->
+    
   <div class="container">
   
+      <!-- Header -->
+      
       <div class="row header__row">
       
+          <!-- Left part of the header -->
+          
           <div class="col-5 header__left">
              <div class="svg_container">
                 <img class="header__logo" src="images/udacity.svg" alt="Udacity U logo" />
               </div>
           </div>
+          
+          <!-- Right part of the header -->
+          
           <div class="col-7 header__right">
             <h1 class="header__title">Janos Vincze</h1>
             <h3 class="header__subtitle">Front-end Ninja</h3>
@@ -38,19 +46,23 @@
           
       </div>
       
+      <!-- The main picture's row -->
       
       <div class="row">
       
         <div class="col-12">
             <hr>
             <picture class="picture__set"> 
-                <source srcset="images/coding-500px.jpg" media="(min-width: 800px)">
-                <source srcset="images/coding-200px.jpg" media="(max-width: 400px)">
-                <img src="images/coding-630px.jpg" alt="Coding">
+                <source srcset="images/coding-630px.jpg" media="(min-width: 601px)">
+                <source srcset="images/coding-crop-630px.jpg" media="(min-width: 301px)">
+                <source srcset="images/coding-crop-500px.jpg" media="(max-width: 300px)">
+                <img src="images/coding-630px.jpg" srcset="images/coding-630px.jpg 1x, images/coding-@2x.jpg 2x" alt="Coding">
             </picture>
         </div>
       
       </div>
+      
+    <!-- The begining of the Featured Work section -->
       
     <div class="row">
       
@@ -61,14 +73,19 @@
       
     </div>
       
+   <!-- The Works section -->
+   <!-- TODO:  -->
+      
    <div class="row">
    <div class="col-12 row__flex">
       
+        <!-- Appify part -->
+       
         <div class="col-4 col__flex">
 
             <picture class="picture__set"> 
-                <source srcset="images/meeting-500px.jpg" media="(min-width: 800px)">
-                <source srcset="images/meeting-200px.jpg" media="(max-width: 400px)">
+                <source srcset="images/meeting-500px.jpg" media="(max-width: 600px and min-width: 301px)">
+                <source srcset="images/meeting-200px.jpg" media="(max-width: 300px)">
                 <img src="images/meeting-630px.jpg" alt="Coding">
             </picture>
             <h3 class="work__title">Appify</h3>
@@ -76,11 +93,13 @@
             
         </div>
        
+        <!-- Sunflower part -->
+       
         <div class="col-4 col__flex">
             
             <picture class="picture__set"> 
-                <source srcset="images/helicopter_view-500px.jpg" media="(min-width: 800px)">
-                <source srcset="images/helicopter_view-200px.jpg" media="(max-width: 400px)">
+                <source srcset="images/helicopter_view-500px.jpg" media="(max-width: 600px and min-width: 301px)">
+                <source srcset="images/helicopter_view-200px.jpg" media="(max-width: 300px)">
                 <img src="images/helicopter_view-630px.jpg" alt="App">
             </picture>
             <h3 class="work__title">Sunflower</h3>
@@ -88,11 +107,13 @@
 
         </div>
        
+        <!-- Bokeh part -->
+       
         <div class="col-4 col__flex">
             
             <picture class="picture__set"> 
-                <source srcset="images/caferacer-500px.jpg" media="(min-width: 800px)">
-                <source srcset="images/caferacer-200px.jpg" media="(max-width: 400px)">
+                <source srcset="images/caferacer-500px.jpg" media="(max-width: 600px and min-width: 301px)">
+                <source srcset="images/caferacer-200px.jpg" media="(max-width: 300px)">
                 <img src="images/caferacer-630px.jpg" alt="Coding">
             </picture>
             <h3 class="work__title">Bokeh</h3>
@@ -102,6 +123,8 @@
       
     </div>
     </div>
+      
+    <!-- Link to GitHub -->
       
     <div class="row">
       
