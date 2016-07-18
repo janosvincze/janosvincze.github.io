@@ -4,7 +4,7 @@ body {
     box-sizing: border-box;
     align-items: center;
     align-content: center;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     color: #2d3c49;
 }
 
@@ -42,6 +42,16 @@ hr {
 
 /* Header */
 
+header {
+    width: 100%;
+    max-width: 750px;
+    min-width: 200px;
+    min-height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
 .svg_container {
     float: left;
     min-width: 100px;
@@ -74,7 +84,6 @@ hr {
     text-align: right;
     min-width: 150px;
 }
-
 
 .header__title {
     font-size: 2.5em;
@@ -214,5 +223,3 @@ hr {
 .col-12 {
     width: 100%;
 }
-
-
